@@ -1,17 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
+    z-index: 1;
 
     body{
+        background-color: #000112;
+        color: white;
+        font-family: 'Space Mono', monospace;
+        overflow: hidden;
         
+        .scene{
+            p{
+                position: absolute;
+                background-color: #ffffff;
+                border-radius: 50%;
+                animation: star linear infinite;
+                z-index: 0;
+            }
+
+        }
         main{   
+            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 95vh;
             text-align: center;
             flex-direction: column;
+            position: relative;
+
+            h1{
+                font-size: 7.5rem;
+                margin-top: 5rem;
+            }
+            h4{
+                font-size: 1.5rem;
+            }
+
+            .timer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 7rem 0;
+                padding: 10rem;
+                border-radius: 50%;
+                height: 32rem;
+                width: 32rem;
+                background-color: darkorange;
+                box-shadow: 0 0 25px 15px orange;
+                h2{
+                    font-size: 7.5rem;
+                }
+            }
+
+            .modal{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: absolute;
+                top: 25%;
+                width: 50rem;
+                height: 50rem;
+
+                visibility: hidden;
+                background-image: url('../img/spaceship.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: black;
+                border-radius: 1.5rem;
+                transform: translateX(-250%);
+                h2{
+                    font-size: 50px;
+                }
+                
+                .buttons{
+                    display: flex;
+                    gap: 5rem;
+
+                    .btn-modal{
+                        width: auto;
+                        height: 5rem;
+                        padding: 1rem;
+                        background-color: white;
+                        border: 2px solid black;
+                        border-radius: 10px;
+                        box-shadow: 1px 1px 5px black;
+                        margin-top: 5rem;
+                    }
+                }
+            }
+
+            .buttons{
+                display: flex;
+                gap: 2rem;
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 3rem;
+                    border-radius: 50%;
+                    padding: 1rem;
+                    width: 5rem;
+                    height: 5rem;
+                    border: none;
+                    outline: none;
+                }
+
+                .earth{
+                    background-image: url('https://static.wixstatic.com/media/2cd43b_578af8f28bba4f1e91d62f66ebae7995~mv2.png/v1/fill/w_300,h_300,q_90/2cd43b_578af8f28bba4f1e91d62f66ebae7995~mv2.png');
+                    background-size: cover;
+                }
+
+                .mars{
+                        background-image: url('http://pngimg.com/uploads/mars_planet/mars_planet_PNG38.png');
+                        background-size: cover;
+                }
+
+                .mercury{
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b9/3D_Mercury.png');
+                    background-size: cover;
+                }
+
+                .jupiter{
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Jupiter_%28transparent%29.png');
+                    background-size: cover;
+                }
+            }
+
         }
+    }
+    @keyframes star {
+       0%{
+           opacity: 0;
+           transform: translateY(0);
+       }
+    
+       10%,90%
+       {
+        opacity: 1;
+       }
+    
+       100%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
     }
 }
