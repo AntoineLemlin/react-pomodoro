@@ -3,17 +3,18 @@ import Timer from "./Timer"
 import Buttons from "./Buttons";
 import Header from "./Header";
 import Modal from "./Modal";
+import Design from "./Design";
 
 
 const App = () => {
-    const [seconds, setSeconds] = useState(5);
+    const [seconds, setSeconds] = useState(0);
     const [paused, setPaused] = useState(true);
     const [lastTime, setLastTime] = useState(0);
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const scene = document.querySelector('.scene');
-    const count = 300;
+    const count = 250;
     
     for(let i = 0; i<count; i++){
         let star = document.createElement('p');
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div className="App">
         <main className="scene">
             <Header />
+            <Design />
             <Timer lastTime={lastTime} paused={paused} setPaused={setPaused} seconds={seconds} setSeconds={setSeconds} />
             <Buttons  lastTime={lastTime} setLastTime={setLastTime} paused={paused} setPaused={setPaused} seconds={seconds} setSeconds={setSeconds} /> 
             <Modal lastTime={lastTime} setLastTime={setLastTime} paused={paused} setPaused={setPaused}  seconds={seconds} setSeconds={setSeconds}/>

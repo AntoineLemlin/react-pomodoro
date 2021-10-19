@@ -14,15 +14,17 @@ const Buttons = (props) => {
     }
 
     const addMinutes = () => {
-        props.setPaused(true);
-        props.setSeconds(props.seconds + 60);
-        props.setLastTime(props.seconds + 60);
+        if(props.paused){
+            props.setSeconds(props.seconds + 60);
+            props.setLastTime(props.seconds + 60);
+        }
     }
 
     const removeMinutes = () => {
-        props.setPaused(true);
-        props.setSeconds(props.seconds - 60);
-        props.setLastTime(props.seconds - 60);
+        if(props.paused){
+            props.setSeconds(props.seconds - 60);
+            props.setLastTime(props.seconds - 60);
+        }
     }
 
     const resetMinutes = () => {

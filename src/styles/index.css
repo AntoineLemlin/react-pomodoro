@@ -9,7 +9,8 @@
 }
 
 * body {
-  background-color: #000112;
+  background-image: url("https://wallpaper.dog/large/17255315.jpg");
+  background-size: cover;
   color: white;
   font-family: 'Space Mono', monospace;
   overflow: hidden;
@@ -71,10 +72,27 @@
   background-color: darkorange;
   -webkit-box-shadow: 0 0 25px 15px orange;
           box-shadow: 0 0 25px 15px orange;
+  z-index: 2;
 }
 
 * body main .timer h2 {
   font-size: 7.5rem;
+  text-shadow: 2px 2px 0 black;
+}
+
+* body main .design .saturn {
+  position: absolute;
+  display: inline;
+  top: 50%;
+  right: 5%;
+  height: 150px;
+  width: 250px;
+  background-image: url("http://assets.stickpng.com/images/580b585b2edbce24c47b270d.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 * body main .modal {
@@ -104,6 +122,7 @@
   border-radius: 1.5rem;
   -webkit-transform: translateX(-250%);
           transform: translateX(-250%);
+  z-index: 3;
 }
 
 * body main .modal h2 {

@@ -10,6 +10,7 @@ const Timer = (props) => {
                 setTimeout(() => props.setSeconds(props.seconds - 0.5), 500)
             }
         }else if(props.seconds <= 0 && props.lastTime !== 0){
+            props.setPaused(true);
             document.querySelector('.modal').style.visibility ="visible";
             document.querySelector('.modal').style.transform = "translateX(0)";
             document.querySelector('.modal').style.transition = "transform 2s";
