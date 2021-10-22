@@ -4,16 +4,16 @@ import "../styles/index.css";
 const Modal = (props) => {
 
     const restartTimer = () => {
-        props.setPaused(false);
-        props.setSeconds(props.lastTime);
         document.querySelector('.modal').style.transform = "translateX(250%)";
         document.querySelector('.modal').style.transition = "transform 2s";
         setTimeout(() => {
             document.querySelector(".modal").style.visibility = "hidden";
             document.querySelector('.modal').style.transform = "translateX(-250%)";
+            props.setSeconds(props.lastTime);
+            props.setPaused(false);
         }, 2000);
     }
-
+    
     const stopTimer = () => {
         props.setPaused(true);
         document.querySelector('.modal').style.transform = "translateX(250%)";

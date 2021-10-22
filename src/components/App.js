@@ -4,6 +4,7 @@ import Buttons from "./Buttons";
 import Header from "./Header";
 import Modal from "./Modal";
 import Design from "./Design";
+import SpaceShip from "./SpaceShip";
 
 
 const App = () => {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <Timer lastTime={lastTime} paused={paused} setPaused={setPaused} seconds={seconds} setSeconds={setSeconds} />
             <Buttons  lastTime={lastTime} setLastTime={setLastTime} paused={paused} setPaused={setPaused} seconds={seconds} setSeconds={setSeconds} /> 
             <Modal lastTime={lastTime} setLastTime={setLastTime} paused={paused} setPaused={setPaused}  seconds={seconds} setSeconds={setSeconds}/>
+            <SpaceShip lastTime={lastTime} seconds={seconds} />
         </main>
         </div>
     );

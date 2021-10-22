@@ -95,6 +95,21 @@
           filter: blur(2px);
 }
 
+* body main .spaceship .container {
+  position: absolute;
+  left: calc(100% - 150px);
+  top: 50%;
+  width: 150px;
+  height: 50px;
+  background-image: url("../img/spaceship.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: left 2s;
+  transition: left 2s;
+}
+
 * body main .modal {
   display: -webkit-box;
   display: -ms-flexbox;
