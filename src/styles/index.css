@@ -106,8 +106,8 @@
   background-repeat: no-repeat;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-transition: left 2s;
-  transition: left 2s;
+  -webkit-transition: left 1.5s;
+  transition: left 1.5s;
 }
 
 * body main .modal {
